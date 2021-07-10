@@ -6,7 +6,7 @@ if (keyboard_check_pressed(ord("S")))
     
     SaveBufferToFile(_buffer, "test.txt", 0, buffer_get_size(_buffer), function(_ticket)
     {
-        show_debug_message("Saved \"" + _ticket.filename + "\", result = \"" + _ticket.result + "\"");
+        show_message("Saved \"" + _ticket.filename + "\"");
     });
 }
 

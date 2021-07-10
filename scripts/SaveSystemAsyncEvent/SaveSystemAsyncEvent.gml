@@ -41,11 +41,16 @@ function SaveSystemAsyncEvent()
                 {
     	            steam_file_write_file(_ticket.filename, global.__saveSystemGroupName + "\\" + _ticket.filename);
                 }
+                
+                _ticket.result = "success";
             break;
             
             case "delete":
+                
                 //Clean up the 1-byte buffer
                 buffer_delete(_ticket.buffer);
+                
+                _ticket.result = "success";
             break;
 	    }
         
