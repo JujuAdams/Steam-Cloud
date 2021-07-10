@@ -1,7 +1,7 @@
 function DeleteFile(_filename, _callback)
 {
     //Delete the file! This bit's important
-    file_delete(_filename);
+    file_delete(global.__saveSystemGroupName + "\\" + _filename);
     
     //If we're on Steam then delete this file off of the cloud
     if (global.__saveSystemWantCloudSaves)
